@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/controller/task-controller.js" type="module"></script>
+</head>
+
+<body>
+    <h1>To Do App</h1>
+    <div class="container">
+        <label class="first" for="id">Id:</label>
+        <input class="second" id="id" name="id" type="text" placeholder="Enter Id Number">
+    </div>
+
+    <div class="container">
+        <label class="first" for="name">Name:</label>
+        <input class="second" id="name" name="name" type="text" autocomplete="name" placeholder="Enter Name">
+    </div>
+
+    <div class="container">
+        <label class="first" for="desc">Description:</label>
+        <textarea class="second" id="desc" name="description" placeholder="Enter Description" rows="5" cols="10"></textarea>
+    </div>
+
+    <div class="container">
+        <label class="first" for="date">Date:</label>
+        <input class="second" id="date" name="date" type="date">
+    </div>
+
+    <div class="container">
+        <label class="first" for="color">Color:</label>
+        <input class="second" id="color" name="color" type="color">
+    </div>
+
+    <div class="container">
+        <label class="first" for="url">URL:</label>
+        <input class="second" id="url" name="url" type="url" autocomplete="url" placeholder="Enter URL">
+    </div>
+
+    <div class="container">
+        <button id="add" class="btn hand">Add</button>
+        <button id="delete" class="btn hand">Delete</button>
+        <button id="update" class="btn hand">Update</button>
+        <button class="btn hand">Search</button>
+        <button id="save" class="btn hand">Save</button>
+        <button id="load" class="btn hand">Load</button>
+        <button id="load-from-server" class="btn hand">Load From Server</button>
+        <button id="clearall" class="btn hand">Clear All</button>
+    </div>
+    <div id="result" class="container">
+        <h2>Total Records <span id="total"></span> Marked Records <span id="mark"></span> Unmarked Records <span id="unmark"></span></h2>
+        <table>
+            <thead>
+                <tr>
+                    <td class="third">Id</td>
+                    <td class="third">Name</td>
+                    <td class="third">Description</td>
+                    <td class="third">Date</td>
+                    <td class="third">Color</td>
+                    <td class="third">URL</td>
+                    <td class="third">Operations</td>
+                </tr>
+            </thead>
+            <tbody id="tasks">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
